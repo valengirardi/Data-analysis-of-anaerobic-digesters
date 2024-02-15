@@ -47,3 +47,21 @@ conda activate qiime2
 # Verificar la instalación:
 Qiime info
 
+## Configuración adicional
+# Cargar canales adicionales:
+conda config --add channels bioconda
+
+# Instalar herramientas adicionales:
+conda install fastqc multiqc
+
+## Instalación de QIIME 2 Amplicon 2023
+# Descargar la versión específica de QIIME 2 Amplicon:
+conda install wget
+wget https://data.qiime2.org/distro/amplicon/qiime2-amplicon-2023.9-py38-osx-conda.yml
+
+# Crear el entorno desde el archivo:
+conda env create -n qiime2-amplicon-2023.9 --file qiime2-amplicon-2023.9-py38-osx-conda.yml
+
+# Activar el entorno QIIME 2 Amplicon:
+conda activate qiime2-amplicon-2023.9
+
